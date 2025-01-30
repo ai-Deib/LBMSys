@@ -29,14 +29,14 @@ public class mainLibSys {
             boolean continueInput = true;
 
             while (continueInput) {
-                System.out.println("Choose an option to insert data:");
+                System.out.println("==Choose an option to insert data==");
                 System.out.println("1. Insert into users table");
                 System.out.println("2. Insert into books table");
                 System.out.println("3. Insert into borrow_history table");
                 System.out.println("4. Insert into favorite_books table");
                 System.out.println("5. Insert into notification table");
                 System.out.println("6. Exit");
-
+                System.out.print("Enter your choice: ");
                 int choice = scanner.nextInt();
                 scanner.nextLine(); // consume newline
 
