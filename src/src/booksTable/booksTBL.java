@@ -1,4 +1,5 @@
 package booksTable;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -21,13 +22,13 @@ public class booksTBL {
         String password = "alexander_0114";
 
         String createTableSQLBooks = "CREATE TABLE IF NOT EXISTS books (" +
-                                "book_id INT PRIMARY KEY, " +
-                                "title VARCHAR(255), " +
-                                "author VARCHAR(255), " +
-                                "genre VARCHAR(100), " +
-                                "pages INT, " +
-                                "publication_date DATE, " +
-                                "availability BOOLEAN)";
+                                     "book_id INT PRIMARY KEY, " +
+                                     "title VARCHAR(255), " +
+                                     "author VARCHAR(255), " +
+                                     "genre VARCHAR(100), " +
+                                     "pages INT, " +
+                                     "publication_date DATE, " +
+                                     "availability BOOLEAN)";
 
         try (Connection connection = DriverManager.getConnection(url, user, password);
              Statement statement = connection.createStatement()) {
@@ -37,6 +38,8 @@ public class booksTBL {
             statement.execute(createTableSQLBooks);
             System.out.println("Books table created successfully!");
 
+            // Insert the specified books into the books table
+            
         } catch (SQLException e) {
             System.out.println("Failed to establish connection or execute SQL statement.");
             e.printStackTrace();
